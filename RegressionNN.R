@@ -1,19 +1,24 @@
-source("ANN_Fn.R")
+sigmoid <- function(x) {
+  sig <- 1/(1 + exp(-x))
+}
 
+sigmoid.derivative <- function(x) {
+  sig.derivative <- sigmoid(x) * (1 - sigmoid(x))
+}
+#===================================================================#
+set.seed(87)
 library(ISLR)
 auto <- Auto[, c("horsepower", "weight", "year", "origin", "mpg")]
 
 auto$X4 <- ifelse(auto$origin == 1, 1, 0)
 auto$X5 <- ifelse(auto$origin == 2, 1, 0)
 auto <- auto[ , -4]
-# auto <- scale(auto)
 
 randomNumbers <- sample(1:392, 242)
 train.X <- as.matrix(auto[randomNumbers, -4])
 train.Y <- auto[randomNumbers, 4]
 test.X <- as.matrix(auto[-randomNumbers, -4])
 test.Y <- auto[-randomNumbers, 4]
-#train.X <- scale(train.X)
 
 mns <- colMeans(train.X)
 sds <- apply(train.X, 2, sd)
