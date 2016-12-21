@@ -3,4 +3,5 @@ This repository contains a few Machine Learning algorithms that I have coded fro
 I have not used any existing libraries available in R.
 All algorithms are fairly basic and have been built from first principles.
 
-1) RegressionNN.R contains source code for a Back Prop based Neural Network. It uses the Auto dataset to predict mpg values using horsepower, weight, year and origin as predictor variables.
+1) NN.R and NNFunctions.R contains source code for K nearest neighbour implementation.
+2) RegressionNN.R contains source code for a Back Prop based Neural Network. It uses the Auto dataset to predict mpg values using horsepower, weight, year and origin as predictor variables.
