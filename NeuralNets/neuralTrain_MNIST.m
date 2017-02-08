@@ -57,4 +57,25 @@
              end             
          end            
     end
+    
+    
+    testAtr = loadMNISTImages('t10k-images-idx3-ubyte');
+    testLbl = loadMNISTLabels('t10k-labels-idx1-ubyte');
+    testAtr = trainAtr';
+    
+    xT = testAtr;
+    yT = testLbl;
+    xT = [ones(size(xT, 1), 1) xT];   
+    a1T = xT;
+    z2T = a1T * W1';
+    a2T = sig(z2T, 'hyperbolic');
+     
+    a2T = [ones(size(a2T, 1), 1) a2T];
+    z3T = a2T * W2';
+    a3T = sig(z3T, 'hyperbolic');
+    [~, final] = max(a3T, [], 2);
+    accuracy = sum(final == yT);
+    
+    
+    
 
