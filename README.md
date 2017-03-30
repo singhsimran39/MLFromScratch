@@ -7,6 +7,10 @@ All algorithms are fairly basic and have been built from first principles.
 
   - [hclust_Single.R](https://github.com/singhsimran39/MLFromScratch/blob/master/Clustering/hclust_Single.R) - Heirarchical agglomerative clustering using single linakge.
 
+### Discriminant Analysis
+ - Discriminant Analysis methods approximate Bayes Classifier by using the estimates of Prior Probability, Class Mean and Class Standard Deviation.
+ - The [directory](https://github.com/singhsimran39/MLFromScratch/tree/master/DiscriminantAnalysis) contains code for both Linear and Quadratic Discriminant Analysis and the helper methods.
+
 ### Ensemble Methods
 - [This repository](https://github.com/singhsimran39/MLFromScratch/tree/master/EnsembleMethods) Contains implemetation of boosted decision stumps.
 
