@@ -1,7 +1,10 @@
 # Machine Learning Algorithms from scratch
 
 This repository contains a few Machine Learning algorithms that I have coded from scratch.
-All algorithms are fairly basic and have been built from first principles.
+All have been built from first principles.
+
+### K Means Clustering using MapReduce
+ - The K-means algorithm involves randomly selecting K initial centroids where K is a user defined number of desired clusters. This iterative process has been built using the MapReduce framework. 
 
 ### Clustering
 
